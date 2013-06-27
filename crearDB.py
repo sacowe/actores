@@ -40,7 +40,7 @@ def create_peliculas(con):
 	query = """CREATE TABLE peliculas(id_pelicula integer PRIMARY KEY AUTOINCREMENT,
 										nombre text, 
 										estreno date, 
-										pais text, 
+										director text, 
 										descripcion text)"""
 	c.execute(query)
 
