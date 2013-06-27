@@ -1,14 +1,14 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 import sys
-import view_main
+import view_peliculas
 from PySide import QtGui, QtCore
 
 class Main(QtGui.QMainWindow):
 	
 	def __init__(self, parent = None):
 		super(Main, self).__init__()
-		mainwin = view_main.Form(self)
+		mainwin = view_peliculas.Form(self)
 #		mainwin.setWindowTitle()
 		mainwin.show()
 
