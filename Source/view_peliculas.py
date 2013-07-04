@@ -11,7 +11,8 @@ class Form(QtGui.QMainWindow):
 		self.set_signals()
 	
 	def set_signals(self):
-		self.ui.menu_peliculas.clicked.connect(self.change_to_actor())
+		print "lolol"
+#		self.ui.menu_peliculas.clicked.connect(self.change_to_actor())
 		
 	def change_to_actor(self):
 		print "lol"
