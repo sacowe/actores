@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'w_actor.ui'
 #
-# Created: Thu Jun 27 11:32:09 2013
+# Created: Thu Jul  4 12:12:09 2013
 #      by: pyside-uic 0.2.13 running on PySide 1.1.1
 #
 # WARNING! All changes made in this file will be lost!
@@ -25,23 +25,8 @@ class Ui_Actor(object):
         self.change = QtGui.QPushButton(self.verticalLayoutWidget)
         self.change.setObjectName("change")
         self.verticalLayout.addWidget(self.change)
-        self.verticalLayoutWidget_2 = QtGui.QWidget(Actor)
-        self.verticalLayoutWidget_2.setGeometry(QtCore.QRect(50, 300, 251, 88))
-        self.verticalLayoutWidget_2.setObjectName("verticalLayoutWidget_2")
-        self.verticalLayout_2 = QtGui.QVBoxLayout(self.verticalLayoutWidget_2)
-        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_2.setObjectName("verticalLayout_2")
-        self.a_name = QtGui.QLabel(self.verticalLayoutWidget_2)
-        self.a_name.setObjectName("a_name")
-        self.verticalLayout_2.addWidget(self.a_name)
-        self.a_age = QtGui.QLabel(self.verticalLayoutWidget_2)
-        self.a_age.setObjectName("a_age")
-        self.verticalLayout_2.addWidget(self.a_age)
-        self.a_birth = QtGui.QLabel(self.verticalLayoutWidget_2)
-        self.a_birth.setObjectName("a_birth")
-        self.verticalLayout_2.addWidget(self.a_birth)
         self.horizontalLayoutWidget = QtGui.QWidget(Actor)
-        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(50, 390, 251, 31))
+        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(40, 390, 251, 31))
         self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
         self.horizontalLayout = QtGui.QHBoxLayout(self.horizontalLayoutWidget)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
@@ -52,6 +37,24 @@ class Ui_Actor(object):
         self.accept = QtGui.QPushButton(self.horizontalLayoutWidget)
         self.accept.setObjectName("accept")
         self.horizontalLayout.addWidget(self.accept)
+        self.a_name = QtGui.QLabel(Actor)
+        self.a_name.setGeometry(QtCore.QRect(30, 300, 249, 25))
+        self.a_name.setObjectName("a_name")
+        self.a_birth = QtGui.QLabel(Actor)
+        self.a_birth.setGeometry(QtCore.QRect(30, 319, 241, 41))
+        self.a_birth.setObjectName("a_birth")
+        self.a_age = QtGui.QLabel(Actor)
+        self.a_age.setGeometry(QtCore.QRect(30, 350, 249, 31))
+        self.a_age.setObjectName("a_age")
+        self.nombre_edit = QtGui.QLineEdit(Actor)
+        self.nombre_edit.setGeometry(QtCore.QRect(130, 300, 181, 27))
+        self.nombre_edit.setObjectName("nombre_edit")
+        self.cumple_edit = QtGui.QLineEdit(Actor)
+        self.cumple_edit.setGeometry(QtCore.QRect(130, 330, 181, 27))
+        self.cumple_edit.setObjectName("cumple_edit")
+        self.lineEdit_3 = QtGui.QLineEdit(Actor)
+        self.lineEdit_3.setGeometry(QtCore.QRect(130, 360, 181, 27))
+        self.lineEdit_3.setObjectName("lineEdit_3")
 
         self.retranslateUi(Actor)
         QtCore.QMetaObject.connectSlotsByName(Actor)
@@ -59,9 +62,9 @@ class Ui_Actor(object):
     def retranslateUi(self, Actor):
         Actor.setWindowTitle(QtGui.QApplication.translate("Actor", "Form", None, QtGui.QApplication.UnicodeUTF8))
         self.change.setText(QtGui.QApplication.translate("Actor", "Cambiar", None, QtGui.QApplication.UnicodeUTF8))
-        self.a_name.setText(QtGui.QApplication.translate("Actor", "Nombre:", None, QtGui.QApplication.UnicodeUTF8))
-        self.a_age.setText(QtGui.QApplication.translate("Actor", "Edad:", None, QtGui.QApplication.UnicodeUTF8))
-        self.a_birth.setText(QtGui.QApplication.translate("Actor", "Cumpleaños:", None, QtGui.QApplication.UnicodeUTF8))
         self.cancel.setText(QtGui.QApplication.translate("Actor", "Cancelar", None, QtGui.QApplication.UnicodeUTF8))
         self.accept.setText(QtGui.QApplication.translate("Actor", "Aceptar", None, QtGui.QApplication.UnicodeUTF8))
+        self.a_name.setText(QtGui.QApplication.translate("Actor", "Nombre:", None, QtGui.QApplication.UnicodeUTF8))
+        self.a_birth.setText(QtGui.QApplication.translate("Actor", "Cumpleaños:", None, QtGui.QApplication.UnicodeUTF8))
+        self.a_age.setText(QtGui.QApplication.translate("Actor", "Edad:", None, QtGui.QApplication.UnicodeUTF8))
 
