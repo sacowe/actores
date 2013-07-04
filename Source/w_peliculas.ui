@@ -72,7 +72,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLabel" name="label_nom">
+   <widget class="QLabel" name="lb_nombre">
     <property name="geometry">
      <rect>
       <x>400</x>
@@ -137,7 +137,7 @@
      <string>Director:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_nom_2">
+   <widget class="QLabel" name="lb_year">
     <property name="geometry">
      <rect>
       <x>360</x>
@@ -150,7 +150,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_nom_4">
+   <widget class="QLabel" name="lb_genero">
     <property name="geometry">
      <rect>
       <x>380</x>
@@ -163,7 +163,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_nom_3">
+   <widget class="QLabel" name="lb_direc">
     <property name="geometry">
      <rect>
       <x>380</x>
