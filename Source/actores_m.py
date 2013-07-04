@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'actores_m.ui'
 #
-# Created: Thu Jun 27 12:17:53 2013
+# Created: Thu Jul  4 12:11:46 2013
 #      by: pyside-uic 0.2.13 running on PySide 1.1.1
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,11 +12,11 @@ from PySide import QtCore, QtGui
 class Ui_actores_m(object):
     def setupUi(self, actores_m):
         actores_m.setObjectName("actores_m")
-        actores_m.resize(710, 463)
+        actores_m.resize(644, 432)
         self.centralwidget = QtGui.QWidget(actores_m)
         self.centralwidget.setObjectName("centralwidget")
         self.horizontalLayoutWidget = QtGui.QWidget(self.centralwidget)
-        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(50, 380, 351, 31))
+        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(10, 360, 351, 31))
         self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
         self.Layout_2 = QtGui.QHBoxLayout(self.horizontalLayoutWidget)
         self.Layout_2.setContentsMargins(0, 0, 0, 0)
@@ -28,7 +28,7 @@ class Ui_actores_m(object):
         self.boton_eliminar1.setObjectName("boton_eliminar1")
         self.Layout_2.addWidget(self.boton_eliminar1)
         self.verticalLayoutWidget = QtGui.QWidget(self.centralwidget)
-        self.verticalLayoutWidget.setGeometry(QtCore.QRect(440, 30, 221, 321))
+        self.verticalLayoutWidget.setGeometry(QtCore.QRect(400, 10, 221, 321))
         self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
         self.Layout = QtGui.QVBoxLayout(self.verticalLayoutWidget)
         self.Layout.setContentsMargins(0, 0, 0, 0)
@@ -65,11 +65,11 @@ class Ui_actores_m(object):
         self.Layout_3.setWidget(2, QtGui.QFormLayout.FieldRole, self.set_cumpleanos1)
         self.Layout.addLayout(self.Layout_3)
         self.tabla_actores1 = QtGui.QTableView(self.centralwidget)
-        self.tabla_actores1.setGeometry(QtCore.QRect(50, 30, 351, 311))
+        self.tabla_actores1.setGeometry(QtCore.QRect(10, 10, 351, 321))
         self.tabla_actores1.setObjectName("tabla_actores1")
         actores_m.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(actores_m)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 710, 20))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 644, 25))
         self.menubar.setObjectName("menubar")
         self.menu_ver = QtGui.QMenu(self.menubar)
         self.menu_ver.setObjectName("menu_ver")
@@ -89,9 +89,9 @@ class Ui_actores_m(object):
         self.boton_agregar1.setText(QtGui.QApplication.translate("actores_m", "Agregar", None, QtGui.QApplication.UnicodeUTF8))
         self.boton_eliminar1.setText(QtGui.QApplication.translate("actores_m", "Eliminar", None, QtGui.QApplication.UnicodeUTF8))
         self.boton_editar1.setText(QtGui.QApplication.translate("actores_m", "Editar", None, QtGui.QApplication.UnicodeUTF8))
-        self.Nombre.setText(QtGui.QApplication.translate("actores_m", "Nombre", None, QtGui.QApplication.UnicodeUTF8))
-        self.Edad.setText(QtGui.QApplication.translate("actores_m", "Edad", None, QtGui.QApplication.UnicodeUTF8))
-        self.Cumpleanos.setText(QtGui.QApplication.translate("actores_m", "Cumpleaños", None, QtGui.QApplication.UnicodeUTF8))
+        self.Nombre.setText(QtGui.QApplication.translate("actores_m", "Nombre:", None, QtGui.QApplication.UnicodeUTF8))
+        self.Edad.setText(QtGui.QApplication.translate("actores_m", "Edad:", None, QtGui.QApplication.UnicodeUTF8))
+        self.Cumpleanos.setText(QtGui.QApplication.translate("actores_m", "Cumpleaños:", None, QtGui.QApplication.UnicodeUTF8))
         self.menu_ver.setTitle(QtGui.QApplication.translate("actores_m", "Ver...", None, QtGui.QApplication.UnicodeUTF8))
         self.menu_actores.setText(QtGui.QApplication.translate("actores_m", "Peliculas", None, QtGui.QApplication.UnicodeUTF8))
         self.menu_peliculas.setText(QtGui.QApplication.translate("actores_m", "Actores", None, QtGui.QApplication.UnicodeUTF8))
