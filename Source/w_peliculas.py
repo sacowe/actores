@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'w_peliculas.ui'
 #
-# Created: Thu Jul  4 12:12:36 2013
+# Created: Thu Jul  4 12:33:08 2013
 #      by: pyside-uic 0.2.13 running on PySide 1.1.1
 #
 # WARNING! All changes made in this file will be lost!
@@ -74,12 +74,12 @@ class Ui_MainWindow(object):
         self.menu_ver = QtGui.QMenu(self.menubar)
         self.menu_ver.setObjectName("menu_ver")
         MainWindow.setMenuBar(self.menubar)
-        self.menu_actores = QtGui.QAction(MainWindow)
-        self.menu_actores.setObjectName("menu_actores")
         self.menu_peliculas = QtGui.QAction(MainWindow)
         self.menu_peliculas.setObjectName("menu_peliculas")
-        self.menu_ver.addAction(self.menu_actores)
+        self.menu_actor = QtGui.QAction(MainWindow)
+        self.menu_actor.setObjectName("menu_actor")
         self.menu_ver.addAction(self.menu_peliculas)
+        self.menu_ver.addAction(self.menu_actor)
         self.menubar.addAction(self.menu_ver.menuAction())
 
         self.retranslateUi(MainWindow)
@@ -99,6 +99,6 @@ class Ui_MainWindow(object):
         self.boton_agregar_peli.setText(QtGui.QApplication.translate("MainWindow", "Agregar Película", None, QtGui.QApplication.UnicodeUTF8))
         self.boton_editar.setText(QtGui.QApplication.translate("MainWindow", "Editar", None, QtGui.QApplication.UnicodeUTF8))
         self.menu_ver.setTitle(QtGui.QApplication.translate("MainWindow", "Ver...", None, QtGui.QApplication.UnicodeUTF8))
-        self.menu_actores.setText(QtGui.QApplication.translate("MainWindow", "Peliculas", None, QtGui.QApplication.UnicodeUTF8))
-        self.menu_peliculas.setText(QtGui.QApplication.translate("MainWindow", "Actores", None, QtGui.QApplication.UnicodeUTF8))
+        self.menu_peliculas.setText(QtGui.QApplication.translate("MainWindow", "Peliculas", None, QtGui.QApplication.UnicodeUTF8))
+        self.menu_actor.setText(QtGui.QApplication.translate("MainWindow", "Actores", None, QtGui.QApplication.UnicodeUTF8))
 

@@ -229,17 +229,17 @@
     <property name="title">
      <string>Ver...</string>
     </property>
-    <addaction name="menu_actores"/>
     <addaction name="menu_peliculas"/>
+    <addaction name="menu_actor"/>
    </widget>
    <addaction name="menu_ver"/>
   </widget>
-  <action name="menu_actores">
+  <action name="menu_peliculas">
    <property name="text">
     <string>Peliculas</string>
    </property>
   </action>
-  <action name="menu_peliculas">
+  <action name="menu_actor">
    <property name="text">
     <string>Actores</string>
    </property>
