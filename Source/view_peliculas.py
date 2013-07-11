@@ -1,10 +1,7 @@
 from PySide import QtGui, QtCore
 #import controller
 from w_peliculas import Ui_MainWindow
-<<<<<<< HEAD
-=======
-import creadDB
->>>>>>> database
+import crearDB
 
 class Form(QtGui.QMainWindow):
 	
@@ -35,11 +32,7 @@ class Form(QtGui.QMainWindow):
 		
 	def no(self):
 		print "Nothing should happen"
-<<<<<<< HEAD
-=======
 
 	def populate(self):
 		print "populando..."
-
->>>>>>> database
 		
