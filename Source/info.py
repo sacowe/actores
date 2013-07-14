@@ -34,5 +34,6 @@ relaciones = [[1,1,"Katniss Everdeen","Katniss Everdeen (Jennifer Lawrence) es u
 			  [4,6,"Tom", "No Description"],
 			  [7,7,"Nanny McPhee", "No Description"],
 			  [3,8,"Korben Dallas","A post-America taxi driver in New York City with a grand military background simply lives his life day to day, that is, before he meets Leeloo. Leeloo captures his heart soon after crashing into his taxi cab one day after escaping from a government-run laboratory. Korben soon finds himself running from the authorities in order to protect Leeloo, as well as becoming the center of a desperate ploy to save the world from an unknown evil."],
-			  [8,8,"Leeloo", "Mondoshawans who was attacked and destroyed with only a hand holding a briefcase handle. Earth used reconstitution device to recreate the rest of the body, whereupon it takes the form of an apparently human woman named Leeloo, described as the perfect being"]
-			  [9,8,"Alice", " Alice is an Umbrella security covert operative placed at the mansion to protect the Hive's emergency entrance. Alice is married to Spence Parks, however, their marriage is revealed to be a fake, in order to cover the operation's secrecy."]]
+			  [8,8,"Leeloo", "Mondoshawans who was attacked and destroyed with only a hand holding a briefcase handle. Earth used reconstitution device to recreate the rest of the body, whereupon it takes the form of an apparently human woman named Leeloo, described as the perfect being."],
+			  [9,8,"Alice", "Alice is an Umbrella security covert operative placed at the mansion to protect the Hive's emergency entrance. Alice is married to Spence Parks, however, their marriage is revealed to be a fake, in order to cover the operation's secrecy."]
+			  ]

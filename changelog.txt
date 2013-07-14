@@ -1,0 +1,10 @@
+Ya que a las ventanas le faltaban muchas cosas, borre las innecesarias y agregue las cosas que faltaban.
+
+La idea del "buscar actor" en la ventana de peliculas es que abra la ventana actores con el nombre del actor en el buscador y vice versa. No estoy seguro si el profe nos dijo si era 1 es a N o N es a N asi que si es 1 es a N lo borran nomas O:
+
+El cuadro grande es la descripcion de la pelicula, es read-only en ventana y editable en formulario.
+
+Boton +: Agregar
+Boton -: Eliminar
+
+En el formulario de peliculas la lista de reparto es para agregar los actores de esa pelicula.

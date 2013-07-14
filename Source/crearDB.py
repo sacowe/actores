@@ -6,7 +6,7 @@ import sqlite3
 import info
 
 def main():
-	con = conect()
+	con = connect()
 	create_actor(con)
 	populate_actor(con)
 	create_peliculas(con)
@@ -15,7 +15,7 @@ def main():
 	populate_actor_has_peliculas(con)
 	con.commit()
 
-def conect():
+def connect():
 	con = sqlite3.connect('main_database.db')
 	con.text_factory = str
 	return con
