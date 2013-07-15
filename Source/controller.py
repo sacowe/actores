@@ -35,6 +35,20 @@ def get_peliculas_table():
 	prod = resultado.fetchall()
 	con.close()
 	return prod
+	
+def get_peliculas_by_name(arg):
+	#devuelve la tabla peliculas completa
+	con = conectar()
+	c = con.cursor()
+	try:
+		query = """SELECT * FROM peliculas WHERE nombre LIKE ?"""
+		resultado = c.execute(query,["%"+arg+"%"])
+	except sqlite3.Error as e:
+		exito = False
+		print "Error:", e.args[0]
+	prod = resultado.fetchall()
+	con.close()
+	return prod
 
 def get_actor_has_peliculas():
 	#devuelve la tabla actor_has_peliculas completa

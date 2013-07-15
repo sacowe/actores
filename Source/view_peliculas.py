@@ -23,34 +23,40 @@ class Form(QtGui.QMainWindow):
 		self.ui.boton_add.clicked.connect(self.show_add_peliculas)
 		self.ui.boton_delete.clicked.connect(self.delete_peliculas)
 		self.ui.lista_pel.currentItemChanged.connect(self.change_info)
+		self.ui.search_peli.returnPressed.connect(self.load_data)
 
 	def change_info(self):
-		newName = self.ui.lista_pel.currentItem().text()
-		newData = controller.search_data_pel(newName)
-		newData = newData[0]
-		nombre = newData[1]
-		director = newData[3]
-		year = newData[2]
-		descripcion = newData[4]
+		try:
+			newName = self.ui.lista_pel.currentItem().text()
+			newData = controller.search_data_pel(newName)
+			newData = newData[0]
+			nombre = newData[1]
+			director = newData[3]
+			year = newData[2]
+			descripcion = newData[4]
+		except AttributeError as e:
+			nombre = ""
+			director = ""
+			year = ""
+			descripcion = ""
 		self.ui.txt_nombre.setText(nombre)
 		self.ui.txt_director.setText(director)
 		self.ui.txt_year.setText(year)
 		self.ui.txt_descripcion.setText(descripcion)
+	
 
 	def load_data(self):
-		if self.first_time:
+		self.ui.lista_pel.clear()
+		
+		if (self.ui.search_peli.text()==""):
 			data = controller.get_peliculas_table()
-			self.first_time = False
-		else:
-			print "else"
+		elif (self.ui.combo_filtro.currentText()=="Actores"):
+			data = controller.get_peliculas_by_name(self.ui.search_peli.text())
 		
 		r = 0
 		for row in data:
 			self.ui.lista_pel.addItem(row[1])
 			r = r+1
-
-		
-
 		
 	def open_actor(self):
 		print "open actor"
