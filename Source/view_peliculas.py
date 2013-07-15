@@ -26,14 +26,16 @@ class Form(QtGui.QMainWindow):
 
 	def change_info(self):
 		newName = self.ui.lista_pel.currentItem().text()
-		newData = controller.search_data(newName)
+		newData = controller.search_data_pel(newName)
 		newData = newData[0]
 		nombre = newData[1]
 		director = newData[3]
 		year = newData[2]
+		descripcion = newData[4]
 		self.ui.txt_nombre.setText(nombre)
 		self.ui.txt_director.setText(director)
 		self.ui.txt_year.setText(year)
+		self.ui.txt_descripcion.setText(descripcion)
 
 	def load_data(self):
 		if self.first_time:
@@ -54,10 +56,9 @@ class Form(QtGui.QMainWindow):
 		print "open actor"
 		
 	def show_actor(self):
-		actores = view_actores.Form(self)
+		self.actores = view_actores.Form(self)
 		self.hide()
-		actores.show()
-		
+		self.actores.show()
 		
 		print "show actor"
 		
