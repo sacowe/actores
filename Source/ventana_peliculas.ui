@@ -27,16 +27,6 @@
      <string>Ingrese nombre...</string>
     </property>
    </widget>
-   <widget class="QListView" name="lista_pel">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>50</y>
-      <width>261</width>
-      <height>271</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QComboBox" name="combo_filtro">
     <property name="geometry">
      <rect>
@@ -236,6 +226,16 @@
     </property>
     <property name="readOnly">
      <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="lista_pel">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>50</y>
+      <width>261</width>
+      <height>271</height>
+     </rect>
     </property>
    </widget>
   </widget>

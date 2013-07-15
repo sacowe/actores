@@ -56,8 +56,18 @@ def convert_to_array(data):
 		lista.append([row[0],row[1],row[2],row[3]])
 	return lista
 
-def dothis():
-	print "g"
+def search_data(name):
+	con = conectar()
+	c = con.cursor()
+	try:
+		query = """SELECT * FROM peliculas WHERE nombre=?"""
+		resultado = c.execute(query,[name])
+	except sqlite3.Error as e:
+		exito = False
+		print "Error:", e.args[0]
+	prod = resultado.fetchall()
+	con.close()
+	return prod
 
 if __name__ == "__main__":
 	dothis()

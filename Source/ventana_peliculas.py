@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ventana_peliculas.ui'
 #
-# Created: Sun Jul 14 18:36:59 2013
+# Created: Mon Jul 15 14:20:55 2013
 #      by: pyside-uic 0.2.13 running on PySide 1.1.1
 #
 # WARNING! All changes made in this file will be lost!
@@ -18,9 +18,6 @@ class Ui_MainWindow(object):
         self.search_peli = QtGui.QLineEdit(self.centralwidget)
         self.search_peli.setGeometry(QtCore.QRect(30, 10, 171, 27))
         self.search_peli.setObjectName("search_peli")
-        self.lista_pel = QtGui.QListView(self.centralwidget)
-        self.lista_pel.setGeometry(QtCore.QRect(30, 50, 261, 271))
-        self.lista_pel.setObjectName("lista_pel")
         self.combo_filtro = QtGui.QComboBox(self.centralwidget)
         self.combo_filtro.setGeometry(QtCore.QRect(210, 10, 81, 27))
         self.combo_filtro.setObjectName("combo_filtro")
@@ -73,6 +70,9 @@ class Ui_MainWindow(object):
         self.txt_descripcion.setGeometry(QtCore.QRect(330, 210, 341, 61))
         self.txt_descripcion.setReadOnly(True)
         self.txt_descripcion.setObjectName("txt_descripcion")
+        self.lista_pel = QtGui.QListWidget(self.centralwidget)
+        self.lista_pel.setGeometry(QtCore.QRect(30, 50, 261, 271))
+        self.lista_pel.setObjectName("lista_pel")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 686, 25))

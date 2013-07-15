@@ -1,5 +1,5 @@
 from PySide import QtGui, QtCore
-#import controller
+import controller
 from ventana_peliculas import Ui_MainWindow
 import crearDB
 import view_form_peli
@@ -12,6 +12,8 @@ class Form(QtGui.QMainWindow):
 		self.ui =  Ui_MainWindow()
 		self.ui.setupUi(self)
 		self.set_signals()
+		self.first_time = True
+		self.load_data()
 	
 	def set_signals(self):
 		self.ui.boton_actores.clicked.connect(self.open_actor)
@@ -20,6 +22,33 @@ class Form(QtGui.QMainWindow):
 		self.ui.boton_editar.clicked.connect(self.show_edit_peliculas)
 		self.ui.boton_add.clicked.connect(self.show_add_peliculas)
 		self.ui.boton_delete.clicked.connect(self.delete_peliculas)
+		self.ui.lista_pel.currentItemChanged.connect(self.change_info)
+
+	def change_info(self):
+		newName = self.ui.lista_pel.currentItem().text()
+		newData = controller.search_data(newName)
+		newData = newData[0]
+		nombre = newData[1]
+		director = newData[3]
+		year = newData[2]
+		self.ui.txt_nombre.setText(nombre)
+		self.ui.txt_director.setText(director)
+		self.ui.txt_year.setText(year)
+
+	def load_data(self):
+		if self.first_time:
+			data = controller.get_peliculas_table()
+			self.first_time = False
+		else:
+			print "else"
+		
+		r = 0
+		for row in data:
+			self.ui.lista_pel.addItem(row[1])
+			r = r+1
+
+		
+
 		
 	def open_actor(self):
 		print "open actor"
