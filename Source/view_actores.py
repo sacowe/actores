@@ -62,12 +62,13 @@ class Form(QtGui.QMainWindow):
 		print "show peliculas"
 		
 	def show_edit_actor(self):
-		nombre = self.ui.lista_act.currentItem().text()
-		formulario = view_form_actor.Form(self)
-		formulario.edit(nombre)
-		formulario.exec_()
-		#except AttributeError as e:
-		#	errorMessageBox = QtGui.QMessageBox.warning(self,"Error","Debe seleccionar un actor")
+		try:
+			nombre = self.ui.lista_act.currentItem().text()
+			formulario = view_form_actor.Form(self)
+			formulario.edit(nombre)
+			formulario.exec_()
+		except AttributeError as e:
+			errorMessageBox = QtGui.QMessageBox.warning(self,"Error","Debe seleccionar un actor")
 		
 	def show_add_actor(self):
 		print "show add (P)"
