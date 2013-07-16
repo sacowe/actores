@@ -70,8 +70,15 @@ class Form(QtGui.QMainWindow):
 			self.ui.lista_pel.addItem(row[1])
 		
 	def open_actor(self):
-		print "open actor"
-		
+		try:
+			nombre = self.ui.lista_actores.currentItem().text()
+			self.actores = view_actores.Form(self)
+			self.hide()
+			self.actores.show()
+			self.actores.ui.search_peli.setText(nombre)
+		except AttributeError as e:
+			errorMessageBox = QtGui.QMessageBox.warning(self,"Error","Debe seleccionar un actor del reparto")
+				
 	def show_actor(self):
 		self.actores = view_actores.Form(self)
 		self.hide()

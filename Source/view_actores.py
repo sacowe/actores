@@ -51,7 +51,6 @@ class Form(QtGui.QMainWindow):
 		self.ui.txt_genero.setText(genero)
 		self.ui.img.setPixmap(QtGui.QPixmap(newData[4]))
 
-
 	def open_actor(self):
 		print "open actor"
 		
