@@ -1,0 +1,13 @@
+=======
+Autores
+=======
+
+:Authors:
+	Luis Barrientos
+	Daniel Berner
+	Roberto Carrasco
+	Nicolas Jaramillo
+	Jorge Rojas
+
+
+:Version: 1.0 of 16/07/2013

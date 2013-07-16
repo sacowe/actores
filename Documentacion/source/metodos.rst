@@ -1,0 +1,26 @@
+Metodos:
+=======
+
+get_actor_table():
+#devuelve la tabla actor completa
+	
+get_peliculas_table():
+#devuelve la tabla peliculas completa
+
+get_peliculas_by_name(arg):
+#devuelve la tabla peliculas completa
+
+get_actor_has_peliculas():
+#devuelve la tabla actor_has_peliculas completa
+
+actors_from_movie(name):
+#devuelve las peliculas del actor "name".
+
+def convert_to_array(data):
+#devuelve un arreglo
+
+def search_data_pel(name):
+#devuelve por pelicula
+
+def search_data_act(name):
+#devuelve por actor
