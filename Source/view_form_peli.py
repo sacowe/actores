@@ -37,7 +37,6 @@ class Form(QtGui.QDialog):
 		self.ui.le_director.setText(director)
 		self.ui.te_descripcion.insertPlainText(desc)
 
-		
 	def delete(self):
 		if(self.ui.le_descripcion.currentItem()):
 			self.ui.cb_actores.addItem(self.ui.le_descripcion.currentItem().text())

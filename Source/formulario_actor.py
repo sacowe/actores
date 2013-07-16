@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'formulario_actor.ui'
 #
-# Created: Mon Jul 15 20:04:27 2013
+# Created: Tue Jul 16 03:22:16 2013
 #      by: pyside-uic 0.2.13 running on PySide 1.1.1
 #
 # WARNING! All changes made in this file will be lost!
@@ -19,9 +19,11 @@ class Ui_Actor(object):
         self.verticalLayout = QtGui.QVBoxLayout(self.verticalLayoutWidget)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout.setObjectName("verticalLayout")
-        self.a_photo = QtGui.QGraphicsView(self.verticalLayoutWidget)
-        self.a_photo.setObjectName("a_photo")
-        self.verticalLayout.addWidget(self.a_photo)
+        self.img = QtGui.QLabel(self.verticalLayoutWidget)
+        self.img.setText("")
+        self.img.setScaledContents(True)
+        self.img.setObjectName("img")
+        self.verticalLayout.addWidget(self.img)
         self.change = QtGui.QPushButton(self.verticalLayoutWidget)
         self.change.setObjectName("change")
         self.verticalLayout.addWidget(self.change)

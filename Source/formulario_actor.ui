@@ -24,7 +24,14 @@
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QGraphicsView" name="a_photo"/>
+     <widget class="QLabel" name="img">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
     </item>
     <item>
      <widget class="QPushButton" name="change">

@@ -52,7 +52,7 @@ class Form(QtGui.QMainWindow):
 		self.ui.img.setPixmap(QtGui.QPixmap(newData[4]))
 
 	def open_actor(self):
-		print "open actor"
+		print "open_actor"
 		
 	def show_peliculas(self):
 		peliculas = view_peliculas.Form(self)
@@ -62,9 +62,12 @@ class Form(QtGui.QMainWindow):
 		print "show peliculas"
 		
 	def show_edit_actor(self):
+		nombre = self.ui.lista_act.currentItem().text()
 		formulario = view_form_actor.Form(self)
+		formulario.edit(nombre)
 		formulario.exec_()
-		print "Opening..."
+		#except AttributeError as e:
+		#	errorMessageBox = QtGui.QMessageBox.warning(self,"Error","Debe seleccionar un actor")
 		
 	def show_add_actor(self):
 		print "show add (P)"
