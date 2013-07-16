@@ -23,6 +23,20 @@ class Form(QtGui.QDialog):
 	def add(self):
 		self.ui.le_descripcion.addItem(self.ui.cb_actores.currentText())
 		self.ui.cb_actores.removeItem(self.ui.cb_actores.currentIndex())
+
+	def edit(self,nombre):
+		data = controller.search_data_pel(nombre)
+		data = data[0]
+		nombre = data[1]
+		estreno = data[2]
+		director = data[3]
+		desc = data[4]
+
+		self.ui.le_nombre.setText(nombre)
+		self.ui.le_fecha.setText(estreno)
+		self.ui.le_director.setText(director)
+		self.ui.te_descripcion.insertPlainText(desc)
+
 		
 	def delete(self):
 		if(self.ui.le_descripcion.currentItem()):
