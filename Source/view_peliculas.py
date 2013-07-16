@@ -12,7 +12,6 @@ class Form(QtGui.QMainWindow):
 		self.ui =  Ui_MainWindow()
 		self.ui.setupUi(self)
 		self.set_signals()
-		self.first_time = True
 		self.load_data()
 	
 	def set_signals(self):
@@ -43,7 +42,13 @@ class Form(QtGui.QMainWindow):
 		self.ui.txt_director.setText(director)
 		self.ui.txt_year.setText(year)
 		self.ui.txt_descripcion.setText(descripcion)
-	
+		
+		self.ui.lista_actores.clear()
+		if (nombre != ""):
+			data = controller.actors_from_movie(nombre)
+			for row in data:
+				self.ui.lista_actores.addItem(row[1])
+		
 
 	def load_data(self):
 		self.ui.lista_pel.clear()
@@ -53,10 +58,8 @@ class Form(QtGui.QMainWindow):
 		elif (self.ui.combo_filtro.currentText()=="Actores"):
 			data = controller.get_peliculas_by_name(self.ui.search_peli.text())
 		
-		r = 0
 		for row in data:
 			self.ui.lista_pel.addItem(row[1])
-			r = r+1
 		
 	def open_actor(self):
 		print "open actor"
@@ -74,7 +77,8 @@ class Form(QtGui.QMainWindow):
 		print "Opening..."
 		
 	def show_add_peliculas(self):
-		print "show add (P)"
+		formulario = view_form_peli.Form(self)
+		formulario.exec_()
 	
 	def delete_peliculas(self):
 		print "Deleted"

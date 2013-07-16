@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'formulario_actor.ui'
 #
-# Created: Sun Jul 14 18:36:26 2013
+# Created: Mon Jul 15 20:04:27 2013
 #      by: pyside-uic 0.2.13 running on PySide 1.1.1
 #
 # WARNING! All changes made in this file will be lost!

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>686</width>
+    <width>555</width>
     <height>413</height>
    </rect>
   </property>
@@ -43,7 +43,7 @@
     </item>
     <item>
      <property name="text">
-      <string>Género</string>
+      <string>Director</string>
      </property>
     </item>
     <item>
@@ -52,22 +52,12 @@
      </property>
     </item>
    </widget>
-   <widget class="QGraphicsView" name="img_view">
-    <property name="geometry">
-     <rect>
-      <x>330</x>
-      <y>10</y>
-      <width>161</width>
-      <height>191</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QLabel" name="txt_nombre">
     <property name="geometry">
      <rect>
       <x>380</x>
-      <y>280</y>
-      <width>281</width>
+      <y>270</y>
+      <width>161</width>
       <height>16</height>
      </rect>
     </property>
@@ -79,7 +69,7 @@
     <property name="geometry">
      <rect>
       <x>310</x>
-      <y>280</y>
+      <y>270</y>
       <width>66</width>
       <height>17</height>
      </rect>
@@ -91,21 +81,21 @@
    <widget class="QLabel" name="lb_year">
     <property name="geometry">
      <rect>
-      <x>550</x>
-      <y>300</y>
-      <width>66</width>
+      <x>310</x>
+      <y>310</y>
+      <width>60</width>
       <height>17</height>
      </rect>
     </property>
     <property name="text">
-     <string>Año:</string>
+     <string>Fecha:</string>
     </property>
    </widget>
    <widget class="QLabel" name="lb_director">
     <property name="geometry">
      <rect>
       <x>310</x>
-      <y>300</y>
+      <y>290</y>
       <width>66</width>
       <height>17</height>
      </rect>
@@ -117,9 +107,9 @@
    <widget class="QLabel" name="txt_year">
     <property name="geometry">
      <rect>
-      <x>590</x>
-      <y>300</y>
-      <width>61</width>
+      <x>360</x>
+      <y>310</y>
+      <width>181</width>
       <height>17</height>
      </rect>
     </property>
@@ -130,10 +120,10 @@
    <widget class="QLabel" name="txt_director">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>300</y>
-      <width>151</width>
-      <height>17</height>
+      <x>380</x>
+      <y>290</y>
+      <width>161</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
@@ -143,8 +133,8 @@
    <widget class="QPushButton" name="boton_actores">
     <property name="geometry">
      <rect>
-      <x>390</x>
-      <y>330</y>
+      <x>340</x>
+      <y>340</y>
       <width>151</width>
       <height>27</height>
      </rect>
@@ -192,21 +182,21 @@
      <string>-</string>
     </property>
    </widget>
-   <widget class="QListView" name="lista_actores">
+   <widget class="QListWidget" name="lista_actores">
     <property name="geometry">
      <rect>
-      <x>500</x>
-      <y>40</y>
-      <width>171</width>
-      <height>161</height>
+      <x>300</x>
+      <y>50</y>
+      <width>241</width>
+      <height>121</height>
      </rect>
     </property>
    </widget>
    <widget class="QLabel" name="lb_reparto">
     <property name="geometry">
      <rect>
-      <x>500</x>
-      <y>10</y>
+      <x>310</x>
+      <y>20</y>
       <width>66</width>
       <height>17</height>
      </rect>
@@ -218,10 +208,10 @@
    <widget class="QTextEdit" name="txt_descripcion">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>210</y>
-      <width>341</width>
-      <height>61</height>
+      <x>300</x>
+      <y>180</y>
+      <width>241</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="readOnly">
@@ -244,7 +234,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>686</width>
+     <width>555</width>
      <height>25</height>
     </rect>
    </property>

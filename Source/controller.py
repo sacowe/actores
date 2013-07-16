@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import sqlite3
+from array import *
 
 def conectar():
 	con = sqlite3.connect('main_database.db')
@@ -61,6 +62,31 @@ def get_actor_has_peliculas():
 		exito = False
 		print "Error:", e.args[0]
 	prod = resultado.fetchall()
+	con.close()
+	return prod
+
+def actors_from_movie(name):
+	#devuelve las peliculas del actor "name".
+	i = 0
+	prod = []
+	con = conectar()
+	c = con.cursor()
+	query1 = "SELECT id_pelicula FROM peliculas WHERE nombre = ?"
+	query2 = "SELECT fk_id_actor FROM actor_has_peliculas WHERE fk_id_pelicula = ?"
+	query3 = "SELECT * FROM actor WHERE id_actor = ?"
+	try:
+		res = c.execute(query1,[name])
+		res = res.fetchone()
+		res = c.execute(query2,[res[0]])
+		res = res.fetchall()
+		for r in res:
+			answer = c.execute(query3,[r[0]])
+#			prod.resize(i+1)
+			prod.append(answer.fetchone())
+			i = i + 1
+	except sqlite3.Error as e:
+		exito = False
+		print "Error:", e.args[0]
 	con.close()
 	return prod
 
