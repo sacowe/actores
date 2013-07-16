@@ -27,16 +27,10 @@ class Form(QtGui.QMainWindow):
 		self.ui.lista_act.currentItemChanged.connect(self.change_info)
 
 	def load_data(self):
-		if self.first_time:
-			data = controller.get_actor_table()
-			self.first_time = False
-		else:
-			print "else"
-		
-		r = 0
+		self.ui.lista_act.clear()
+		data = controller.get_actor_table()
 		for row in data:
 			self.ui.lista_act.addItem(row[1])
-			r = r+1
 
 	def change_info(self):
 		newName = self.ui.lista_act.currentItem().text()
@@ -67,13 +61,29 @@ class Form(QtGui.QMainWindow):
 			formulario = view_form_actor.Form(self)
 			formulario.edit(nombre)
 			formulario.exec_()
+			self.load_data()
 		except AttributeError as e:
 			errorMessageBox = QtGui.QMessageBox.warning(self,"Error","Debe seleccionar un actor")
 		
 	def show_add_actor(self):
+		formulario = view_form_actor.Form(self)
+		formulario.exec_()
+		self.load_data()
 		print "show add (P)"
 	
 	def delete_actor(self):
+		if(self.ui.lista_act.currentItem()):
+			msgBox = QtGui.QMessageBox.question(self, "Borrar registro","¿Estas seguro de eliminar esta columna?",
+												QtGui.QMessageBox.No | QtGui.QMessageBox.Yes)
+			if msgBox == QtGui.QMessageBox.Yes:
+				name = self.ui.lista_act.currentItem().text()
+				controller.delete_actor(name)
+				self.load_data()
+			else:
+				return False
+		else:
+			errorMessageBox = QtGui.QMessageBox.warning(self,"Error","Debe seleccionar un elemento")
+			return False
 		print "Deleted"
 		
 	def no(self):

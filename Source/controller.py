@@ -51,7 +51,21 @@ def delete_peliculas(arg):
 	con.commit()
 	con.close()
 	return True
-	
+
+def delete_actor(arg):
+	#Elimina una fila de la tabla actor.
+	con = conectar()
+	c = con.cursor()
+	try:
+		query = """DELETE FROM actor WHERE nombre = ?"""
+		resultado = c.execute(query,[arg])
+	except sqlite3.Error as e:
+		exito = False
+		print "Error:", e.args[0]
+	con.commit()
+	con.close()
+	return True
+
 def search_peliculas_name(arg):
 	#devuelve la tabla peliculas completa con el nombre arg.
 	con = conectar()
@@ -164,6 +178,36 @@ def edit_pelicula(index,name,director,fecha,desc):
 	con.close()
 	return True
 
+def add_actor(name,birth,gen):
+	#Agrega una fila a la tabla actor con los valores entregados.
+	con = conectar()
+	c = con.cursor()
+	try:
+		query = """INSERT INTO actor (nombre, birthday, genero) VALUES (?,?,?)"""
+		resultado = c.execute(query,[name,birth,gen])
+	except sqlite3.Error as e:
+		exito = False
+		print "Error:", e.args[0]
+	index = c.fetchone()
+	con.commit()
+	con.close()
+	return True
+	
+def edit_actor(name,birth,gen,num):
+	#Edita una fila en la tabla actor con los valores entregados.
+	con = conectar()
+	c = con.cursor()
+	try:
+		query = """UPDATE actor SET nombre = ?, birthday = ?, genero = ? WHERE id_actor = ?"""
+		resultado = c.execute(query,[name,birth,gen,num])
+	except sqlite3.Error as e:
+		exito = False
+		print "Error:", e.args[0]
+	index = c.fetchone()
+	con.commit()
+	con.close()
+	return True
+
 def add_relation(pelicula,actor):
 	#Agrega Foreing Keys en la tabla que relaciona actores con una pelicula.
 	con = conectar()
@@ -222,3 +266,18 @@ def search_data_pel(name):
 	prod = resultado.fetchall()
 	con.close()
 	return prod
+	
+def request_act(num):
+	#Retorna verdadero si una id_actor ya se encuentra en la DB.
+	con = conectar()
+	c = con.cursor()
+	try:
+		query = """SELECT * FROM actor WHERE id_actor=?"""
+		resultado = c.execute(query,[num])
+	except sqlite3.Error as e:
+		exito = False
+		print "Error:",e.args[0]
+	prod = resultado.fetchone()
+	con.close()
+	if prod is not None:
+		return True
