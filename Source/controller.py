@@ -109,7 +109,7 @@ def get_actor_has_peliculas():
 	return prod
 
 def actors_from_movie(name):
-	#devuelve las peliculas del actor "name".
+	#Devuelve los actores de la pelicula "name".
 	i = 0
 	prod = []
 	con = conectar()
@@ -132,20 +132,8 @@ def actors_from_movie(name):
 	con.close()
 	return prod
 
-def search_data_pel(name):
-	con = conectar()
-	c = con.cursor()
-	try:
-		query = """SELECT * FROM peliculas WHERE nombre=?"""
-		resultado = c.execute(query,[name])
-	except sqlite3.Error as e:
-		exito = False
-		print "Error:", e.args[0]
-	prod = resultado.fetchall()
-	con.close()
-	return prod
-
 def add_pelicula(name,director,fecha,desc):
+	#Agrega una fila en la tabla pelicula con los valores entregados.
 	con = conectar()
 	c = con.cursor()
 	try:
@@ -160,8 +148,24 @@ def add_pelicula(name,director,fecha,desc):
 	con.commit()
 	con.close()
 	return index
-	
+
+def edit_pelicula(index,name,director,fecha,desc):
+	#Edita una fila en la tabla pelicula con los valores entregados.
+	con = conectar()
+	c = con.cursor()
+	try:
+		query = """UPDATE peliculas SET nombre = ? ,estreno = ?,pais = ?, descripcion = ? WHERE id_pelicula = ?"""
+		resultado = c.execute(query,[name,fecha,director,desc,index])
+	except sqlite3.Error as e:
+		exito = False
+		print "Error:", e.args[0]
+	index = c.fetchone()
+	con.commit()
+	con.close()
+	return True
+
 def add_relation(pelicula,actor):
+	#Agrega Foreing Keys en la tabla que relaciona actores con una pelicula.
 	con = conectar()
 	c = con.cursor()
 	try:
@@ -170,18 +174,47 @@ def add_relation(pelicula,actor):
 			resultado = c.execute(query,[i])
 			resultado = resultado.fetchone()
 			query = """INSERT INTO actor_has_peliculas(fk_id_actor,fk_id_pelicula) VALUES (?,?)"""
-			resultado = c.execute(query,[resultado[0],pelicula[0]])
+			resultado = c.execute(query,[resultado[0],pelicula])
 	except sqlite3.Error as e:
 		exito = False
 		print "Error:", e.args[0]
 	con.commit()
 	con.close()
+	
+def clear_relation(pelicula):
+	#Agrega Foreing Keys en la tabla que relaciona actores con una pelicula.
+	con = conectar()
+	c = con.cursor()
+	try:
+		query = """DELETE FROM actor_has_peliculas WHERE fk_id_pelicula = ?"""
+		resultado = c.execute(query,[pelicula])
+	except sqlite3.Error as e:
+		exito = False
+		print "Error:", e.args[0]
+	con.commit()
+	con.close()
+	return True
 
 def search_data_act(name):
+	#Obtiene la fila de nombre "name" en la tabla actores.
 	con = conectar()
 	c = con.cursor()
 	try:
 		query = """SELECT * FROM actor WHERE nombre=?"""
+		resultado = c.execute(query,[name])
+	except sqlite3.Error as e:
+		exito = False
+		print "Error:", e.args[0]
+	prod = resultado.fetchall()
+	con.close()
+	return prod
+
+def search_data_pel(name):
+	#Obtiene la fila de nombre "name" en la tabla peliculas.
+	con = conectar()
+	c = con.cursor()
+	try:
+		query = """SELECT * FROM peliculas WHERE nombre=?"""
 		resultado = c.execute(query,[name])
 	except sqlite3.Error as e:
 		exito = False
