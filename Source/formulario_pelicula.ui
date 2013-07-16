@@ -118,7 +118,7 @@
     <string>Reparto:</string>
    </property>
   </widget>
-  <widget class="QListView" name="le_descripcion">
+  <widget class="QListWidget" name="le_descripcion">
    <property name="geometry">
     <rect>
      <x>20</x>

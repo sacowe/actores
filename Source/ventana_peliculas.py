@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ventana_peliculas.ui'
 #
-# Created: Mon Jul 15 21:28:48 2013
+# Created: Mon Jul 15 22:18:05 2013
 #      by: pyside-uic 0.2.13 running on PySide 1.1.1
 #
 # WARNING! All changes made in this file will be lost!
@@ -91,7 +91,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QtGui.QApplication.translate("MainWindow", "Peliculas", None, QtGui.QApplication.UnicodeUTF8))
         self.search_peli.setPlaceholderText(QtGui.QApplication.translate("MainWindow", "Ingrese nombre...", None, QtGui.QApplication.UnicodeUTF8))
-        self.combo_filtro.setItemText(0, QtGui.QApplication.translate("MainWindow", "Actores", None, QtGui.QApplication.UnicodeUTF8))
+        self.combo_filtro.setItemText(0, QtGui.QApplication.translate("MainWindow", "Nombre", None, QtGui.QApplication.UnicodeUTF8))
         self.combo_filtro.setItemText(1, QtGui.QApplication.translate("MainWindow", "Director", None, QtGui.QApplication.UnicodeUTF8))
         self.combo_filtro.setItemText(2, QtGui.QApplication.translate("MainWindow", "Año", None, QtGui.QApplication.UnicodeUTF8))
         self.lb_nombre.setText(QtGui.QApplication.translate("MainWindow", "Nombre:", None, QtGui.QApplication.UnicodeUTF8))

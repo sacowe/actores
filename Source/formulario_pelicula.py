@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'formulario_pelicula.ui'
 #
-# Created: Mon Jul 15 20:04:51 2013
+# Created: Mon Jul 15 22:35:49 2013
 #      by: pyside-uic 0.2.13 running on PySide 1.1.1
 #
 # WARNING! All changes made in this file will be lost!
@@ -40,7 +40,7 @@ class Ui_Actor(object):
         self.lb_reparto = QtGui.QLabel(Actor)
         self.lb_reparto.setGeometry(QtCore.QRect(30, 270, 58, 17))
         self.lb_reparto.setObjectName("lb_reparto")
-        self.le_descripcion = QtGui.QListView(Actor)
+        self.le_descripcion = QtGui.QListWidget(Actor)
         self.le_descripcion.setGeometry(QtCore.QRect(20, 290, 281, 111))
         self.le_descripcion.setObjectName("le_descripcion")
         self.cb_actores = QtGui.QComboBox(Actor)
