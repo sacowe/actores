@@ -116,14 +116,16 @@ class Form(QtGui.QMainWindow):
 		para editar informacion de la pelicula seleccionada. Al precionar
 		el boton "Editar".
 		"""
-		nombre = self.ui.lista_pel.currentItem().text()
-		formulario = view_form_peli.Form(self)
-		formulario.edit(nombre)
-		formulario.exec_()
-		self.load_data()
-		self.change_info()
-		#except AttributeError as e:
-		#	errorMessageBox = QtGui.QMessageBox.warning(self,"Error","Debe seleccionar una pelicula")
+		try:
+			nombre = self.ui.lista_pel.currentItem().text()
+			formulario = view_form_peli.Form(self)
+			formulario.edit(nombre)
+			formulario.exec_()
+			self.load_data()
+			self.change_info()
+		except AttributeError as e:
+			errorMessageBox = QtGui.QMessageBox.warning(self,"Error","Debe seleccionar una pelicula")
+
 
 	def show_add_peliculas(self):
 		"""
