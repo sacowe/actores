@@ -5,6 +5,7 @@ import sqlite3
 from array import *
 
 def conectar():
+	#conecta base de datos
 	con = sqlite3.connect('main_database.db')
 	con.row_factory = sqlite3.Row
 	return con
@@ -131,12 +132,6 @@ def actors_from_movie(name):
 	con.close()
 	return prod
 
-def convert_to_array(data):
-	lista = []
-	for row in data:
-		lista.append([row[0],row[1],row[2],row[3]])
-	return lista
-
 def search_data_pel(name):
 	con = conectar()
 	c = con.cursor()
@@ -194,6 +189,3 @@ def search_data_act(name):
 	prod = resultado.fetchall()
 	con.close()
 	return prod
-
-if __name__ == "__main__":
-	dothis()

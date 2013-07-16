@@ -20,7 +20,6 @@ class Form(QtGui.QMainWindow):
 	def set_signals(self):
 		self.ui.boton_actores.clicked.connect(self.open_actor)
 		self.ui.menu_actor.triggered.connect(self.show_actor)
-#		self.ui.menu_peliculas.triggered.connect(self.no)
 		self.ui.boton_editar.clicked.connect(self.show_edit_peliculas)
 		self.ui.boton_add.clicked.connect(self.show_add_peliculas)
 		self.ui.boton_delete.clicked.connect(self.delete_peliculas)
@@ -41,12 +40,14 @@ class Form(QtGui.QMainWindow):
 			director = ""
 			year = ""
 			descripcion = ""
+
 		self.ui.txt_nombre.setText(nombre)
 		self.ui.txt_director.setText(director)
 		self.ui.txt_year.setText(year)
 		self.ui.txt_descripcion.setText(descripcion)
 		
 		self.ui.lista_actores.clear()
+
 		if (nombre != ""):
 			data = controller.actors_from_movie(nombre)
 			for row in data:
@@ -64,8 +65,7 @@ class Form(QtGui.QMainWindow):
 			data = controller.search_peliculas_direc(self.ui.search_peli.text())
 		elif (self.ui.combo_filtro.currentIndex()==2):
 			data = controller.search_peliculas_year(self.ui.search_peli.text())
-			
-		
+
 		for row in data:
 			self.ui.lista_pel.addItem(row[1])
 		
@@ -105,7 +105,4 @@ class Form(QtGui.QMainWindow):
 		else:
 			errorMessageBox = QtGui.QMessageBox.warning(self,"Error","Debe seleccionar un elemento")
 			return False
-
-	def populate(self):
-		print "populando..."
 		

@@ -39,7 +39,6 @@ class Form(QtGui.QDialog):
 				
 	def accept_action(self):
 		actores = []
-		
 		index = controller.add_pelicula(self.ui.le_nombre.text(),
 										self.ui.le_director.text(),
 										self.ui.le_fecha.text(),

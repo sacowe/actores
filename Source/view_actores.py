@@ -3,7 +3,6 @@
 
 from PySide import QtGui, QtCore
 from ventana_actores import Ui_MainWindow
-import crearDB
 import view_form_actor
 import view_peliculas
 import controller
@@ -46,6 +45,7 @@ class Form(QtGui.QMainWindow):
 		nombre = newData[1]
 		year = newData[2]
 		genero = newData[3]
+
 		self.ui.txt_nombre.setText(nombre)
 		self.ui.txt_year.setText(year)
 		self.ui.txt_genero.setText(genero)
@@ -58,7 +58,7 @@ class Form(QtGui.QMainWindow):
 		peliculas = view_peliculas.Form(self)
 		self.hide()
 		peliculas.show()
-				
+
 		print "show peliculas"
 		
 	def show_edit_actor(self):
