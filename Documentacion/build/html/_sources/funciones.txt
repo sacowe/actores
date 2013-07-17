@@ -228,4 +228,13 @@ Funciones
 		Variables:
 
 		- num      id del actor
-	
+
+
+	:Contenido:
+
+
+	.. toctree::
+		:maxdepth: 2
+
+		autor.rst
+
