@@ -45,10 +45,10 @@ class Form(QtGui.QDialog):
 		data = controller.search_data_pel(nombre)
 		data = data[0]
 		self.index = data[0]
-		nombre = data[1]
-		estreno = data[2]
-		director = data[3]
-		desc = data[4]
+		nombre = unicode(data[1])
+		estreno = unicode(data[2])
+		director = unicode(data[3])
+		desc = unicode(data[4])
 
 		self.ui.le_nombre.setText(nombre)
 		self.ui.le_fecha.setText(estreno)
@@ -91,15 +91,15 @@ class Form(QtGui.QDialog):
 		if(self.isEdited):
 			controller.clear_relation(self.index)	
 			controller.edit_pelicula(self.index,
-										self.ui.le_nombre.text(),
-										self.ui.le_director.text(),
-										self.ui.le_fecha.text(),
-										self.ui.te_descripcion.toPlainText())						
+										unicode(self.ui.le_nombre.text()),
+										unicode(self.ui.le_director.text()),
+										unicode(self.ui.le_fecha.text()),
+										unicode(self.ui.te_descripcion.toPlainText()))						
 		else:
-			self.index = controller.add_pelicula(self.ui.le_nombre.text(),
-											self.ui.le_director.text(),
-											self.ui.le_fecha.text(),
-											self.ui.te_descripcion.toPlainText())
+			self.index = controller.add_pelicula(unicode(self.ui.le_nombre.text()),
+											unicode(self.ui.le_director.text()),
+											unicode(self.ui.le_fecha.text()),
+											unicode(self.ui.te_descripcion.toPlainText()))
 			self.index = self.index[0]
 			
 		for i in xrange(self.ui.le_descripcion.count()):

@@ -31,9 +31,9 @@ class Form(QtGui.QDialog):
 	def edit(self,nombre):
 		data = controller.search_data_act(nombre)
 		data = data[0]
-		nombre_ = data[1]
-		birth = data[2]
-		genero = data[3]
+		nombre_ = unicode(data[1])
+		birth = unicode(data[2])
+		genero = unicode(data[3])
 		self.imagen = data[4]
 		self.id_act = data[0]
 		
@@ -62,12 +62,14 @@ class Form(QtGui.QDialog):
 	
 	def accept_action(self):
 		if(controller.request_act(self.id_act)):
-			controller.edit_actor(self.ui.le_nombre.text(),
-			self.ui.le_birth.text(),self.ui.cb_genero.currentText(),
-			self.id_act)
+			controller.edit_actor(unicode(self.ui.le_nombre.text()),
+								unicode(self.ui.le_birth.text()),
+								unicode(self.ui.cb_genero.currentText()),
+								unicode(self.id_act))
 		elif(self.id_act<0):
-			controller.add_actor(self.ui.le_nombre.text(),
-			self.ui.le_birth.text(),self.ui.cb_genero.currentText())
+			controller.add_actor(unicode(self.ui.le_nombre.text()),
+								unicode(self.ui.le_birth.text()),
+								unicode(self.ui.cb_genero.currentText()))
 		self.reject()
 		
 	def cancel_action(self):

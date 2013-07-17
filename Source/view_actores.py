@@ -106,7 +106,6 @@ class Form(QtGui.QMainWindow):
 		formulario = view_form_actor.Form(self)
 		formulario.exec_()
 		self.load_data()
-		print "show add (P)"
 	
 	def delete_actor(self):
 		"""
@@ -124,4 +123,3 @@ class Form(QtGui.QMainWindow):
 		else:
 			errorMessageBox = QtGui.QMessageBox.warning(self,"Error","Debe seleccionar un elemento")
 			return False
-		print "Deleted"
