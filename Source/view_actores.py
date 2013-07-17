@@ -13,6 +13,7 @@ class Form(QtGui.QMainWindow):
 		QtGui.QMainWindow.__init__(self, parent)
 		self.ui =  Ui_MainWindow()
 		self.ui.setupUi(self)
+		self.setWindowTitle("Actores")
 		self.set_signals()
 		self.first_time = True
 		self.load_data()
