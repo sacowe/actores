@@ -206,13 +206,13 @@ def edit_pelicula(index,name,director,fecha,desc):
 	con.close()
 	return True
 
-def add_actor(name,birth,gen):
+def add_actor(name,birth,gen,img):
 	#Agrega una fila a la tabla actor con los valores entregados.
 	con = conectar()
 	c = con.cursor()
 	try:
-		query = """INSERT INTO actor (nombre, birthday, genero) VALUES (?,?,?)"""
-		resultado = c.execute(query,[name,birth,gen])
+		query = """INSERT INTO actor (nombre, birthday, genero, imagen) VALUES (?,?,?,?)"""
+		resultado = c.execute(query,[name,birth,gen,img])
 	except sqlite3.Error as e:
 		exito = False
 		print "Error:", e.args[0]
@@ -221,13 +221,13 @@ def add_actor(name,birth,gen):
 	con.close()
 	return True
 	
-def edit_actor(name,birth,gen,num):
+def edit_actor(name,birth,gen,img,num):
 	#Edita una fila en la tabla actor con los valores entregados.
 	con = conectar()
 	c = con.cursor()
 	try:
-		query = """UPDATE actor SET nombre = ?, birthday = ?, genero = ? WHERE id_actor = ?"""
-		resultado = c.execute(query,[name,birth,gen,num])
+		query = """UPDATE actor SET nombre = ?, birthday = ?, genero = ?, imagen=?  WHERE id_actor = ?"""
+		resultado = c.execute(query,[name,birth,gen,img,num])
 	except sqlite3.Error as e:
 		exito = False
 		print "Error:", e.args[0]

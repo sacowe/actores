@@ -80,7 +80,7 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QtGui.QApplication.translate("MainWindow", "Peliculas", None, QtGui.QApplication.UnicodeUTF8))
+        MainWindow.setWindowTitle(QtGui.QApplication.translate("MainWindow", "Actores", None, QtGui.QApplication.UnicodeUTF8))
         self.search_actor.setPlaceholderText(QtGui.QApplication.translate("MainWindow", "Ingrese nombre...", None, QtGui.QApplication.UnicodeUTF8))
         self.combo_filtro.setItemText(0, QtGui.QApplication.translate("MainWindow", "Actor", None, QtGui.QApplication.UnicodeUTF8))
         self.combo_filtro.setItemText(1, QtGui.QApplication.translate("MainWindow", "Género", None, QtGui.QApplication.UnicodeUTF8))
