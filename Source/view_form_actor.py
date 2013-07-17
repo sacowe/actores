@@ -20,8 +20,6 @@ class Form(QtGui.QDialog):
 		self.ui.setupUi(self)
 		self.build_combobox()
 		self.set_signals()
-		print self.dirc
-		print self.filename
 
 	def set_signals(self):
 		self.ui.change.clicked.connect(self.change_image)
@@ -47,15 +45,13 @@ class Form(QtGui.QDialog):
 		ventana = QtGui.QFileDialog()
 		self.nueva_ruta = ventana.getOpenFileName(self,"Escoga imagen",
 		"images/", "Imagenes (*.png *.jpg *.bmp)")
-		self.nueva_ruta = self.nueva_ruta[0]
-		self.ui.img.setPixmap(QtGui.QPixmap(self.nueva_ruta))
-
-	def guardar_cambios(self):
+		self.imagen = self.nueva_ruta[0]
+		self.ui.img.setPixmap(QtGui.QPixmap(self.imagen))
+		shutil.copy(self.imagen,self.filename)
 		#cuando guarda cambios sobreescribe imagen anterior con shutil
 		#pendiente: en DB updatear ruta con self.nueva_ruta
 		#pendiente: actualizar pixmap en la ventana de actores
-		shutil.copy(self.nueva_ruta,self.imagen)
-
+		
 	def build_combobox(self):
 		self.ui.cb_genero.addItem("Masculino")
 		self.ui.cb_genero.addItem("Femenino")
@@ -64,12 +60,12 @@ class Form(QtGui.QDialog):
 		if(controller.request_act(self.id_act)):
 			controller.edit_actor(self.ui.le_nombre.text(),
 			self.ui.le_birth.text(),self.ui.cb_genero.currentText(),
-			self.id_act)
+			self.imagen,self.id_act)
 		elif(self.id_act<0):
 			controller.add_actor(self.ui.le_nombre.text(),
-			self.ui.le_birth.text(),self.ui.cb_genero.currentText())
+			self.ui.le_birth.text(),self.ui.cb_genero.currentText(),
+			self.imagen)
 		self.reject()
 		
 	def cancel_action(self):
 		self.reject()
-	
