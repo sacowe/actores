@@ -47,29 +47,150 @@
   <div class="section" id="funciones">
 <h1>Funciones<a class="headerlink" href="#funciones" title="Permalink to this headline">¶</a></h1>
 <blockquote>
-<div><p>Nombre:</p>
+<div><p>Nombre: conectar():</p>
 <blockquote>
-<div><p>Descripcion</p>
-<p>Variables:
--variable      descripcion</p>
+<div>Conecta con la base de datos</div></blockquote>
+<p>Nombre: get_actor_table():</p>
+<blockquote>
+<div>devuelve la tabla actor completa</div></blockquote>
+<p>Nombre: get_peliculas_table():</p>
+<blockquote>
+<div>devuelve la tabla peliculas completa</div></blockquote>
+<p>Nombre: delete_peliculas(arg):</p>
+<blockquote>
+<div><p>elimina un elemento de la tabla peliculas</p>
+<p>Variables:</p>
+<ul class="simple">
+<li>arg      elemento de entrada</li>
+</ul>
 </div></blockquote>
-<p>Nombre:</p>
+<p>Nombre: delete_actor(arg):</p>
 <blockquote>
-<div><p>Descripcion</p>
-<p>Variables:
--variable      descripcion</p>
+<div><p>Elimina una fila de la tabla actor.</p>
+<p>Variables:</p>
+<ul class="simple">
+<li>arg      fila de la tabla</li>
+</ul>
 </div></blockquote>
-<p>Nombre:</p>
+<p>Nombre: search_peliculas_name(arg):</p>
 <blockquote>
-<div><p>Descripcion</p>
-<p>Variables:
--variable      descripcion</p>
+<div><p>devuelve la tabla peliculas completa con el nombre arg</p>
+<p>Variables:</p>
+<ul class="simple">
+<li>arg      nombre de la pelicula</li>
+</ul>
 </div></blockquote>
-<p>Nombre:</p>
+<p>Nombre: search_peliculas_direc(arg):</p>
 <blockquote>
-<div><p>Descripcion</p>
-<p>Variables:
--variable      descripcion</p>
+<div><p>devuelve la tabla peliculas completa con el nombre del director arg.</p>
+<p>Variables:</p>
+<ul class="simple">
+<li>arg   nombre del director</li>
+</ul>
+</div></blockquote>
+<p>Nombre: search_peliculas_year(arg):</p>
+<blockquote>
+<div><p>devuelve la tabla peliculas completa del año arg.</p>
+<p>Variables:</p>
+<ul class="simple">
+<li>arg      año de la pelicula</li>
+</ul>
+</div></blockquote>
+<p>Nombre: get_actor_has_peliculas():</p>
+<blockquote>
+<div>devuelve la tabla actor_has_peliculas completa</div></blockquote>
+<p>Nombre: actors_from_movie(name):</p>
+<blockquote>
+<div><p>Devuelve los actores de la pelicula &#8220;name&#8221;.</p>
+<p>Variables:</p>
+<ul class="simple">
+<li>name      nombre de la pelicula</li>
+</ul>
+</div></blockquote>
+<p>Nombre: add_pelicula(name,director,fecha,desc):</p>
+<blockquote>
+<div><p>Agrega una fila en la tabla pelicula con los valores entregados.</p>
+<p>Variables:</p>
+<ul class="simple">
+<li>name          año de la pelicula</li>
+<li>director      director de la pelicula</li>
+<li>fecha         año de la pelicula</li>
+<li>desc          descripcion de la pelicula</li>
+</ul>
+</div></blockquote>
+<p>Nombre: edit_pelicula(index,name,director,fecha,desc):</p>
+<blockquote>
+<div><p>Edita una fila en la tabla pelicula con los valores entregados.</p>
+<p>Variables:</p>
+<ul class="simple">
+<li>index         id de la pelicula</li>
+<li>name          año de la pelicula</li>
+<li>director      director de la pelicula</li>
+<li>fecha         año de la pelicula</li>
+<li>desc          descripcion de la pelicula</li>
+</ul>
+</div></blockquote>
+<p>Nombre: add_actor(name,birth,gen):</p>
+<blockquote>
+<div><p>Agrega una fila a la tabla actor con los valores entregados.</p>
+<p>Variables:</p>
+<ul class="simple">
+<li>name          nombre del actor</li>
+<li>birth         año del actor</li>
+<li>gen           genero del actor</li>
+</ul>
+</div></blockquote>
+<p>Nombre: edit_actor(name,birth,gen,num):</p>
+<blockquote>
+<div><p>Edita una fila en la tabla actor con los valores entregados.</p>
+<p>Variables:</p>
+<ul class="simple">
+<li>name          nombre del actor</li>
+<li>birth         año del actor</li>
+<li>gen           genero del actor</li>
+</ul>
+</div></blockquote>
+<p>Nombre: add_relation(pelicula,actor):</p>
+<blockquote>
+<div><p>Edita una fila en la tabla actor con los valores entregados.</p>
+<p>Variables:</p>
+<ul class="simple">
+<li>name          nombre del actor</li>
+<li>birth         año del actor</li>
+<li>gen           genero del actor</li>
+</ul>
+</div></blockquote>
+<p>Nombre: clear_relation(pelicula):</p>
+<blockquote>
+<div><p>Agrega Foreing Keys en la tabla que relaciona actores con una pelicula.</p>
+<p>Variables:</p>
+<ul class="simple">
+<li>pelicula      nombre de la pelicula</li>
+</ul>
+</div></blockquote>
+<p>Nombre: search_data_act(name):</p>
+<blockquote>
+<div><p>Obtiene la fila de nombre &#8220;name&#8221; en la tabla actores.</p>
+<p>Variables:</p>
+<ul class="simple">
+<li>name      nombre del actor</li>
+</ul>
+</div></blockquote>
+<p>Nombre: def search_data_pel(name):</p>
+<blockquote>
+<div><p>Obtiene la fila de nombre &#8220;name&#8221; en la tabla peliculas.</p>
+<p>Variables:</p>
+<ul class="simple">
+<li>name      nombre de la pelicula</li>
+</ul>
+</div></blockquote>
+<p>Nombre: request_act(num):</p>
+<blockquote>
+<div><p>Retorna verdadero si una id_actor ya se encuentra en la DB.</p>
+<p>Variables:</p>
+<ul class="simple">
+<li>num      id del actor</li>
+</ul>
 </div></blockquote>
 </div></blockquote>
 </div>

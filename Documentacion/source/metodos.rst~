@@ -1,5 +1,5 @@
-:Metodos
-
+Metodos:
+=======
 
 get_actor_table():
 #devuelve la tabla actor completa

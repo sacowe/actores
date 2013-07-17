@@ -3,37 +3,229 @@ Funciones
 =========
 	Funcion 1
 	---------
-	Nombre:
+	Nombre:	conectar():
 		
-		Descripcion
+		Conecta con la base de datos
 		
-		Variables:
-		-variable      descripcion
-	
+
 	Funcion 2
 	---------
-	Nombre:
+	Nombre:	get_actor_table():
 		
-		Descripcion
+		devuelve la tabla actor completa
 		
-		Variables:
-		-variable      descripcion
 		
 	Funcion 3
 	---------
-	Nombre:
+	Nombre:	get_peliculas_table():
 		
-		Descripcion
+		devuelve la tabla peliculas completa
 		
-		Variables:
-		-variable      descripcion
 		
 	Funcion 4
 	---------
-	Nombre:
+	Nombre:	delete_peliculas(arg):
 		
-		Descripcion
+		elimina un elemento de la tabla peliculas
 		
 		Variables:
-		-variable      descripcion
+
+		- arg      elemento de entrada
+	
+
+	Funcion 5
+	---------
+	Nombre:	delete_actor(arg):
+		
+		Elimina una fila de la tabla actor.
+		
+		Variables:
+
+		- arg      fila de la tabla
+	
+
+	Funcion 6
+	---------
+	Nombre:	search_peliculas_name(arg):
+		
+		devuelve la tabla peliculas completa con el nombre arg
+		
+		Variables:
+
+		- arg      nombre de la pelicula
+	
+	
+
+	Funcion 7
+	---------
+	Nombre:	search_peliculas_direc(arg):
+		
+		devuelve la tabla peliculas completa con el nombre del director arg.
+		
+		Variables:
+
+		- arg	nombre del director
+	
+	
+
+	Funcion 8
+	---------
+	Nombre:	search_peliculas_year(arg):
+		
+		devuelve la tabla peliculas completa del año arg.
+		
+		Variables:
+
+		- arg      año de la pelicula
+
+
+	Funcion 9
+	---------
+	Nombre:	get_actor_has_peliculas():
+		
+		devuelve la tabla actor_has_peliculas completa
+
+
+	Funcion 10
+	---------
+	Nombre:	actors_from_movie(name):
+		
+		Devuelve los actores de la pelicula "name".
+		
+		Variables:
+
+		- name      nombre de la pelicula
+
+
+	Funcion 11
+	---------
+	Nombre:	add_pelicula(name,director,fecha,desc):
+		
+		Agrega una fila en la tabla pelicula con los valores entregados.
+		
+		Variables:
+
+		- name		año de la pelicula
+
+		- director	director de la pelicula
+
+		- fecha		año de la pelicula
+
+		- desc		descripcion de la pelicula
+
+
+	Funcion 12
+	---------
+	Nombre:	edit_pelicula(index,name,director,fecha,desc):
+		
+		Edita una fila en la tabla pelicula con los valores entregados.
+		
+		Variables:
+
+
+		- index		id de la pelicula
+
+		- name		año de la pelicula
+
+		- director	director de la pelicula
+
+		- fecha		año de la pelicula
+
+		- desc		descripcion de la pelicula
+
+
+	Funcion 13
+	---------
+	Nombre:	add_actor(name,birth,gen):
+		
+		Agrega una fila a la tabla actor con los valores entregados.
+		
+		Variables:
+
+		- name		nombre del actor
+
+		- birth		año del actor
+
+		- gen		genero del actor
+
+
+
+	Funcion 14
+	---------
+	Nombre:	edit_actor(name,birth,gen,num):
+		
+		Edita una fila en la tabla actor con los valores entregados.
+		
+		Variables:
+
+		- name		nombre del actor
+ 
+		- birth		año del actor
+
+		- gen		genero del actor
+
+
+
+	Funcion 15
+	---------
+	Nombre:	add_relation(pelicula,actor):
+		
+		Edita una fila en la tabla actor con los valores entregados.
+		
+		Variables:
+
+		- name		nombre del actor
+
+		- birth		año del actor
+
+		- gen		genero del actor
+
+
+	Funcion 16
+	---------
+	Nombre:	clear_relation(pelicula):
+		
+		Agrega Foreing Keys en la tabla que relaciona actores con una pelicula.
+		
+		Variables:
+
+		- pelicula      nombre de la pelicula
+
+
+
+
+	Funcion 17
+	---------
+	Nombre:	search_data_act(name):
+		
+		Obtiene la fila de nombre "name" en la tabla actores.
+		
+		Variables:
+
+		- name      nombre del actor
+
+
+
+
+	Funcion 18
+	---------
+	Nombre:	def search_data_pel(name):
+		
+		Obtiene la fila de nombre "name" en la tabla peliculas.
+		
+		Variables:
+
+		- name      nombre de la pelicula
+
+
+
+	Funcion 19
+	---------
+	Nombre:	request_act(num):
+		
+		Retorna verdadero si una id_actor ya se encuentra en la DB.
+		
+		Variables:
+
+		- num      id del actor
 	
