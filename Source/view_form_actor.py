@@ -5,10 +5,13 @@ from PySide import QtGui, QtCore
 from formulario_actor import Ui_Actor
 import controller
 import shutil
+import os
 
 class Form(QtGui.QDialog):
 	
 	id_act = -1
+	dirc = os.path.dirname(__file__)
+	filename = os.path.join(dirc, '\images')
 	
 	def __init__(self, parent=None):
 		QtGui.QDialog.__init__(self, parent)
@@ -17,6 +20,8 @@ class Form(QtGui.QDialog):
 		self.ui.setupUi(self)
 		self.build_combobox()
 		self.set_signals()
+		print self.dirc
+		print self.filename
 
 	def set_signals(self):
 		self.ui.change.clicked.connect(self.change_image)

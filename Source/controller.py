@@ -107,6 +107,34 @@ def search_peliculas_year(arg):
 	prod = resultado.fetchall()
 	con.close()
 	return prod
+	
+def search_actor_name(arg):
+	#devuelve la tabla actores completa con el nombre arg.
+	con = conectar()
+	c = con.cursor()
+	try:
+		query = """SELECT * FROM actor WHERE nombre LIKE ?"""
+		resultado = c.execute(query,["%"+arg+"%"])
+	except sqlite3.Error as e:
+		exito = False
+		print "Error:", e.args[0]
+	prod = resultado.fetchall()
+	con.close()
+	return prod
+	
+def search_actor_sex(arg):
+	#devuelve la tabla actores completa con los actores de algun sexo.
+	con = conectar()
+	c = con.cursor()
+	try:
+		query = """SELECT * FROM actor WHERE genero LIKE ?"""
+		resultado = c.execute(query,[arg+"%"])
+	except sqlite3.Error as e:
+		exito = False
+		print "Error:", e.args[0]
+	prod = resultado.fetchall()
+	con.close()
+	return prod
 
 def get_actor_has_peliculas():
 	#devuelve la tabla actor_has_peliculas completa
@@ -281,3 +309,5 @@ def request_act(num):
 	con.close()
 	if prod is not None:
 		return True
+	else:
+		return False

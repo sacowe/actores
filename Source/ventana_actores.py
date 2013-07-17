@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ventana_actores.ui'
 #
-# Created: Mon Jul 15 15:26:32 2013
+# Created: Tue Jul 16 23:07:14 2013
 #      by: pyside-uic 0.2.13 running on PySide 1.1.1
 #
 # WARNING! All changes made in this file will be lost!
@@ -15,9 +15,9 @@ class Ui_MainWindow(object):
         MainWindow.resize(534, 413)
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.search_peli = QtGui.QLineEdit(self.centralwidget)
-        self.search_peli.setGeometry(QtCore.QRect(30, 10, 161, 27))
-        self.search_peli.setObjectName("search_peli")
+        self.search_actor = QtGui.QLineEdit(self.centralwidget)
+        self.search_actor.setGeometry(QtCore.QRect(30, 10, 161, 27))
+        self.search_actor.setObjectName("search_actor")
         self.combo_filtro = QtGui.QComboBox(self.centralwidget)
         self.combo_filtro.setGeometry(QtCore.QRect(200, 10, 91, 27))
         self.combo_filtro.setObjectName("combo_filtro")
@@ -40,9 +40,6 @@ class Ui_MainWindow(object):
         self.txt_year.setGeometry(QtCore.QRect(400, 240, 101, 17))
         self.txt_year.setText("")
         self.txt_year.setObjectName("txt_year")
-        self.boton_actores = QtGui.QPushButton(self.centralwidget)
-        self.boton_actores.setGeometry(QtCore.QRect(340, 330, 151, 27))
-        self.boton_actores.setObjectName("boton_actores")
         self.boton_add = QtGui.QPushButton(self.centralwidget)
         self.boton_add.setGeometry(QtCore.QRect(220, 330, 31, 27))
         self.boton_add.setObjectName("boton_add")
@@ -84,13 +81,12 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QtGui.QApplication.translate("MainWindow", "Peliculas", None, QtGui.QApplication.UnicodeUTF8))
-        self.search_peli.setPlaceholderText(QtGui.QApplication.translate("MainWindow", "Ingrese nombre...", None, QtGui.QApplication.UnicodeUTF8))
-        self.combo_filtro.setItemText(0, QtGui.QApplication.translate("MainWindow", "Peliculas", None, QtGui.QApplication.UnicodeUTF8))
+        self.search_actor.setPlaceholderText(QtGui.QApplication.translate("MainWindow", "Ingrese nombre...", None, QtGui.QApplication.UnicodeUTF8))
+        self.combo_filtro.setItemText(0, QtGui.QApplication.translate("MainWindow", "Actor", None, QtGui.QApplication.UnicodeUTF8))
         self.combo_filtro.setItemText(1, QtGui.QApplication.translate("MainWindow", "Género", None, QtGui.QApplication.UnicodeUTF8))
         self.lb_nombre.setText(QtGui.QApplication.translate("MainWindow", "Nombre:", None, QtGui.QApplication.UnicodeUTF8))
         self.lb_genero.setText(QtGui.QApplication.translate("MainWindow", "Genero:", None, QtGui.QApplication.UnicodeUTF8))
         self.lb_year.setText(QtGui.QApplication.translate("MainWindow", "Nacimiento:", None, QtGui.QApplication.UnicodeUTF8))
-        self.boton_actores.setText(QtGui.QApplication.translate("MainWindow", "Buscar sus peliculas", None, QtGui.QApplication.UnicodeUTF8))
         self.boton_add.setText(QtGui.QApplication.translate("MainWindow", "+", None, QtGui.QApplication.UnicodeUTF8))
         self.boton_editar.setText(QtGui.QApplication.translate("MainWindow", "Editar", None, QtGui.QApplication.UnicodeUTF8))
         self.boton_delete.setText(QtGui.QApplication.translate("MainWindow", "-", None, QtGui.QApplication.UnicodeUTF8))

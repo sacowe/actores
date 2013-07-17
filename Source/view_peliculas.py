@@ -95,11 +95,13 @@ class Form(QtGui.QMainWindow):
 		try:
 			nombre = self.ui.lista_actores.currentItem().text()
 			self.actores = view_actores.Form(self)
+			self.actores.ui.search_actor.setText(nombre)
 			self.hide()
 			self.actores.show()
-			self.actores.ui.search_peli.setText(nombre)
+			self.actores.load_data()
 		except AttributeError as e:
 			errorMessageBox = QtGui.QMessageBox.warning(self,"Error","Debe seleccionar un actor del reparto")
+		
 				
 	def show_actor(self):
 		"""
